@@ -77,9 +77,8 @@ measurePerformance(tinyArray, 'tinyArray');
 measurePerformance(smallArray, 'smallArray')
 measurePerformance(mediumArray, 'mediumArray')
 
-// TODO insert functions to measure performance of other arrays here
+//insert functions to measure performance of other arrays
 measurePerformance(extraLargeArray, 'extraLargeArray')
-
 
 
 console.log('resultsTable', resultsTable)
