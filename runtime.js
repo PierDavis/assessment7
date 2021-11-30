@@ -12,7 +12,6 @@ function doublerAppend(nums){
 
 }
 
-
 function doublerInsert(nums){
 
     let new_nums = [];
@@ -24,7 +23,6 @@ function doublerInsert(nums){
 
 }
 
-
 function getSizedArray(size){
     let array = [];
     for (let i=0; i<size; i++){
@@ -33,14 +31,11 @@ function getSizedArray(size){
     return array
 }
 
-
 const tinyArray = getSizedArray(10);
 const smallArray = getSizedArray(100);
 const mediumArray = getSizedArray(1000);
 const largeArray = getSizedArray(10000);
 const extraLargeArray = getSizedArray(100000);
-
-
 
 // How long does it take to double every number in a given 
 // array? 
@@ -74,15 +69,13 @@ function measurePerformance(dataSet, dataSetName) {
 }
 
 measurePerformance(tinyArray, 'tinyArray');
-measurePerformance(smallArray, 'smallArray')
-measurePerformance(mediumArray, 'mediumArray')
-
-//insert functions to measure performance of other arrays
-measurePerformance(extraLargeArray, 'extraLargeArray')
+measurePerformance(smallArray, 'smallArray');
+measurePerformance(mediumArray, 'mediumArray');
+measurePerformance(LargeArray, 'LargeArray');
+measurePerformance(extraLargeArray, 'extraLargeArray');
 
 
 console.log('resultsTable', resultsTable)
-
 
 
 // console.log('Results for the extraLargeArray');
