@@ -45,18 +45,47 @@ const extraLargeArray = getSizedArray(100000);
 // How long does it take to double every number in a given 
 // array? 
 
-// Try it with first function
-perf.start();                     // Starts timer
-doublerAppend(extraLargeArray);
-let resultsAppend = perf.stop();  // Stops timer and save time results
+
+// // Try it with first function
+// perf.start();                     // Starts timer
+// doublerAppend(extraLargeArray);
+// let resultsAppend = perf.stop();  // Stops timer and save time results
+
+let resultsTable = []
+
+function measurePerformance(dataSet, dataSetName) {
+    perf.start();                     // Starts timer
+    doublerAppend(dataSet);
+    let resultsAppend = perf.stop();  // Stops timer and save time results
+
+// // Try it with second function
+// perf.start();
+// doublerInsert(extraLargeArray);
+// let resultsInsert = perf.stop();
+
+    perf.start();
+    doublerInsert(dataSet);
+    let resultsInsert = perf.stop();
+
+    resultsTable.push({
+        [dataSetName]: {'resultsInsert': resultsInsert.preciseWords, 
+                'resultsAppend': resultsAppend.preciseWords}})
+
+}
+
+measurePerformance(tinyArray, 'tinyArray');
+measurePerformance(smallArray, 'smallArray')
+measurePerformance(mediumArray, 'mediumArray')
+
+// TODO insert functions to measure performance of other arrays here
+measurePerformance(extraLargeArray, 'extraLargeArray')
 
 
-// Try it with second function
-perf.start();
-doublerInsert(extraLargeArray);
-let resultsInsert = perf.stop();
+
+console.log('resultsTable', resultsTable)
 
 
-console.log('Results for the extraLargeArray');
-console.log("insert", resultsInsert.preciseWords);
-console.log("append", resultsAppend.preciseWords);
+
+// console.log('Results for the extraLargeArray');
+// console.log("insert", resultsInsert.preciseWords);
+// console.log("append", resultsAppend.preciseWords);
