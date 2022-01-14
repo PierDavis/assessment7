@@ -71,13 +71,13 @@ function measurePerformance(dataSet, dataSetName) {
 measurePerformance(tinyArray, 'tinyArray');
 measurePerformance(smallArray, 'smallArray');
 measurePerformance(mediumArray, 'mediumArray');
-measurePerformance(LargeArray, 'LargeArray');
+measurePerformance(largeArray, 'largeArray');
 measurePerformance(extraLargeArray, 'extraLargeArray');
 
 
 console.log('resultsTable', resultsTable)
 
 
-// console.log('Results for the extraLargeArray');
-// console.log("insert", resultsInsert.preciseWords);
-// console.log("append", resultsAppend.preciseWords);
+console.log('Results for the extraLargeArray');
+console.log("insert", resultsInsert.preciseWords);
+console.log("append", resultsAppend.preciseWords);
